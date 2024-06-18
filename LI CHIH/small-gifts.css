@@ -170,6 +170,10 @@ h1 {
 @media (max-width: 600px) {
     .square-grid {
         margin-left: 0; /* 移除左侧外边距 */
-        gap: 0px; /* 格子之间的间隔 */
+        gap: 0px; /* 格子之间的间隔 */   
+    }
+    .square {
+        width: calc(98% - 25px); /* 在屏幕宽度小于或等于600px时，格子宽度减小2%，减去25px */
+        padding-bottom: calc(98% - 25px); /* 保持正方形格子，高度等于宽度，减小2%，减去25px */
     }
 }
