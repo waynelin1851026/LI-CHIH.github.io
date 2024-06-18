@@ -169,11 +169,12 @@ h1 {
 
 @media (max-width: 600px) {
     .square-grid {
-        margin-left: 0; /* 移除左侧外边距 */
-        gap: 0px; /* 格子之间的间隔 */   
-    }
-    .square {
-        width: calc(98% - 25px); /* 在屏幕宽度小于或等于600px时，格子宽度减小2%，减去25px */
-        padding-bottom: calc(98% - 25px); /* 保持正方形格子，高度等于宽度，减小2%，减去25px */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 每行显示两列，每列平分剩余空间 */
+        gap: 5px; /* 格子之间的间隔 */
+        justify-items: center; /* 水平居中格子内容 */
+        margin: auto; /* 让容器水平居中 */
+        margin-left: 5px; /* 左侧外边距 */
     }
 }
+
