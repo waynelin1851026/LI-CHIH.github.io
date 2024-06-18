@@ -110,11 +110,14 @@ body {
         'small-gifts small-gifts esg-products esg-products'
         'customized-gifts customized-gifts case-studies case-studies';
     gap: 10px; /* 間距 */
+    padding: 20px; /*內邊匡*/
 }
 
 .container-grid > div {
-    position: relative; /* 相對定位 */
-    overflow: hidden; /* 隱藏超出部分 */
+    position: relative; /* 相對定位，用於定位內部元素 */
+    overflow: hidden; /* 隱藏超出部分的內容 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* 水平偏移量, 垂直偏移量, 模糊半徑, 顏色 */
+    padding: 20px; /* 內邊距，增加內容與邊框之間的距離 */
 }
 
 .container-grid > div a {
