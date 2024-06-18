@@ -167,8 +167,8 @@ h1 {
     }
 
     .image-caption {
-        display: inline-block; /* 图片和文字在同一行显示 */
-        text-align: center; /* 文字居中对齐 */
+        display: block; /* 让文字单独占据一行 */
+        text-align: left; /* 文字左对齐 */
         font-size: 12px; /* 调整文字的字体大小 */
     }
 }
