@@ -113,10 +113,10 @@ h1 {
 .square-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px)); /* 自动适应列宽，最小宽度100px，最大宽度200px */
-    gap: 30px; /* 格子之间的间隔 */
+    gap: 20px; /* 格子之间的间隔 */
     justify-items: center; /* 水平居中格子内容 */
     margin: auto; /* 让容器水平居中 */
-    margin-left: 30px; /* 左侧外边距 */
+    margin-left: 20px; /* 左侧外边距 */
 }
 
 
