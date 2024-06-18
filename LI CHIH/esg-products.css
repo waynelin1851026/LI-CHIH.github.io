@@ -155,16 +155,20 @@ h1 {
 
 @media (max-width: 600px) {
     .image-item {
-        flex-direction: column; /* 垂直排列图片和文字 */
-        align-items: center; /* 水平居中 */
+        display: block; /* 将项目设为块级元素 */
+        text-align: center; /* 图片和文字居中对齐 */
+        margin-bottom: 50px; /* 与下一个框之间的垂直间距 */
     }
 
     .gallery-image {
-        margin-right: 0; /* 移除图片和文字之间的间距 */
-        margin-bottom: 10px; /* 图片和文字之间增加垂直间距 */
+        display: inline-block; /* 图片和文字在同一行显示 */
+        margin-right: 10px; /* 图片和文字之间的水平间距 */
+        margin-bottom: 10px; /* 图片和文字之间的垂直间距 */
     }
 
     .image-caption {
-        text-align: center; /* 中心对齐文字 */
+        display: inline-block; /* 图片和文字在同一行显示 */
+        text-align: center; /* 文字居中对齐 */
+        font-size: 12px; /* 调整文字的字体大小 */
     }
 }
