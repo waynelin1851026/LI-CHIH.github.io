@@ -1,0 +1,224 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif; /* 设置全局字体为Arial或sans-serif */
+    margin: 0; /* 去除页面的默认外边距 */
+    padding: 0; /* 去除页面的默认内边距 */
+    background: url(images/background.jpg) no-repeat center center fixed; /* 设置背景图片并居中 */
+    background-size: cover; /* 让背景图片充满整个屏幕 */
+}
+/* 页面样式 */
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%; /* 设置页面最大宽度为视口宽度 */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+}
+/*******************************************************************/
+
+
+/*目錄*/
+.directory-icon {
+    position: fixed; /* 固定位置 */
+    top: 16px; /* 與頂部的距離 */
+    right: 20px; /* 與右邊的距離 */
+    cursor: pointer; /* 滑鼠游標變成手指 */
+    z-index: 1000; /* 確保在其他元素上方 */
+}
+
+.directory-icon img {
+    width: 50px; /* 目錄圖片的寬度 */
+    height: auto; /* 高度自適應 */
+    
+}
+
+.directory-content {
+    display: none; /* 初始時隱藏內容 */
+    position: absolute; /* 絕對定位 */
+    top: 50px; /* 與目錄圖片的下邊緣距離 */
+    right: 0; /* 與視窗右邊對齊 */
+    background-color: rgba(71, 70, 70, 0.8); /* 半透明灰色背景 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 陰影效果，調整陰影顏色和模糊程度 */
+    padding: 10px;
+    z-index: 999; /* 確保在其他元素上方 */
+    width: 200px; /* 設置寬度 */
+    max-height: calc(100vh - 60px); /* 設置最大高度，考慮目錄圖片與上邊距之間的距離 */
+    overflow-y: auto; /* 如果內容超出高度，顯示滾動條 */
+}
+
+.directory-content ul {
+    list-style-type: none; /* 去除點點 */
+    padding: 0;
+}
+
+.directory-content ul li {
+    padding: 5px 0;
+}
+
+.directory-icon:hover .directory-content {
+    display: block; /* 滑鼠懸停時顯示內容 */
+}
+.directory-content ul li {
+    padding: 5px 0;
+}
+
+.directory-content ul li a {
+    display: block; /* 块级显示 */
+    padding: 10px 15px; /* 内边距 */
+    text-decoration: none; /* 去除下划线 */
+    color: white; /* 文字颜色 */
+    background-color: rgba(255, 255, 255, 0.2); /* 悬停背景颜色 */
+    border-radius: 5px; /* 圆角 */
+}
+
+.directory-content ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* 悬停时背景颜色 */
+}
+
+
+
+/*******************************************************************/
+/* Logo 樣式 */
+.logo-container {
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中子元素 */
+}
+
+.logo-container a {
+    color: inherit; /* 继承父元素的文字颜色 */
+    text-decoration: none; /* 取消下划线 */
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中子元素 */
+}
+
+.logo {
+    height: 100px; /* 图片高度为50px */
+    margin-right: 20px; /* 右侧外边距为10px */
+}
+.company-image {
+    max-width: 50%; /* 设置最大宽度 */
+    max-height: 100px; /* 设置最大高度 */
+}
+
+/*******************************************************************/
+
+
+/* 網頁排版 */
+.container-grid {
+    display: grid;
+    grid-template-areas:
+        'about-us about-us about-us about-us'
+        'small-gifts small-gifts esg-products esg-products'
+        'customized-gifts customized-gifts case-studies case-studies';
+    gap: 10px; /* 間距 */
+}
+
+.container-grid > div {
+    position: relative; /* 相對定位 */
+    overflow: hidden; /* 隱藏超出部分 */
+}
+
+.container-grid > div a {
+    display: block; /* 塊級元素 */
+    width: 100%; /* 寬度100% */
+    height: 100%; /* 高度100% */
+    text-decoration: none; /* 去除下劃線 */
+    color: inherit;
+}
+
+.about-us {
+    background-image: url('images/a1.jpg'); /* 替換為你的背景圖片路徑 */
+    background-size: 100% 200%; /* 圖片大小設置為100%寬度和高度 */
+    background-position: center; /* 圖片居中 */
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+    grid-area: about-us;
+    color: rgb(9, 9, 9); /* 文字顏色，根據圖片背景調整 */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.small-gifts {
+    background-image: url('images/a2.jpg');
+    background-size: 100% 100%; /* 圖片大小設置為100%寬度和高度 */
+    grid-area: small-gifts;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 多行文字居中 */
+    font-size: 40px; /* 根據需要調整大小 */
+    color: #000; /* 文字顏色，根據需要調整 */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customized-gifts {
+    background-image: url('images/a3.jpg');
+    background-size: 100% 100%;
+    grid-area: customized-gifts;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 多行文字居中 */
+    font-size: 40px; /* 根據需要調整大小 */
+    color: #000; /* 文字顏色，根據需要調整 */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.esg-products {
+    background-image: url('images/a4.jpg');
+    background-size: 100% 100%;
+    grid-area: esg-products;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 多行文字居中 */
+    font-size: 40px; /* 根据需要调整大小 */
+    color: #070707; /* 文字颜色，根据需要调整 */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-studies {
+    background-image: url('images/a5.jpg');
+    background-size: 100% 100%;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    grid-area: case-studies;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 多行文字居中 */
+    font-size: 40px; /* 根据需要调整大小 */
+    color: #000; /* 文字颜色，根据需要调整 */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.small-gifts,
+.customized-gifts,
+.esg-products {
+    padding: 10px;
+    height: 300px;
+}
+
+.small-gifts:hover,
+.customized-gifts:hover,
+.esg-products:hover,
+.case-studies:hover,
+.about-us:hover {
+    border: 2px solid #000; /* 鼠標懸停時顯示的框框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
+}
+
+@media (max-width: 600px) {
+    .container-grid {
+        display: grid;
+        grid-template-areas:
+            'about-us'
+            'small-gifts'
+            'customized-gifts'
+            'esg-products'
+            'case-studies';
+    }
+}
+
+

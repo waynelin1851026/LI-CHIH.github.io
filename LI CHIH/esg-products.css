@@ -1,0 +1,170 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif; /* 设置全局字体为Arial或sans-serif */
+    margin: 0; /* 去除页面的默认外边距 */
+    padding: 0; /* 去除页面的默认内边距 */
+    background: url(images/background.jpg) no-repeat center center fixed; /* 设置背景图片并居中 */
+    background-size: cover; /* 让背景图片充满整个屏幕 */
+}
+/* 页面样式 */
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%; /* 设置页面最大宽度为视口宽度 */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+}
+/*******************************************************************/
+
+
+/*目錄*/
+.directory-icon {
+    position: fixed; /* 固定位置 */
+    top: 16px; /* 與頂部的距離 */
+    right: 20px; /* 與右邊的距離 */
+    cursor: pointer; /* 滑鼠游標變成手指 */
+    z-index: 1000; /* 確保在其他元素上方 */
+}
+
+.directory-icon img {
+    width: 50px; /* 目錄圖片的寬度 */
+    height: auto; /* 高度自適應 */
+}
+
+.directory-content {
+    display: none; /* 初始時隱藏內容 */
+    position: absolute; /* 絕對定位 */
+    top: 50px; /* 與目錄圖片的下邊緣距離 */
+    right: 0; /* 與視窗右邊對齊 */
+    background-color: rgba(71, 70, 70, 0.8); /* 半透明灰色背景 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 陰影效果，調整陰影顏色和模糊程度 */
+    padding: 10px;
+    z-index: 999; /* 確保在其他元素上方 */
+    width: 200px; /* 設置寬度 */
+    max-height: calc(100vh - 60px); /* 設置最大高度，考慮目錄圖片與上邊距之間的距離 */
+    overflow-y: auto; /* 如果內容超出高度，顯示滾動條 */
+}
+
+.directory-content ul {
+    list-style-type: none; /* 去除點點 */
+    padding: 0;
+}
+
+.directory-content ul li {
+    padding: 5px 0;
+}
+
+.directory-icon:hover .directory-content {
+    display: block; /* 滑鼠懸停時顯示內容 */
+}
+.directory-content ul li {
+    padding: 5px 0;
+}
+
+.directory-content ul li a {
+    display: block; /* 块级显示 */
+    padding: 10px 15px; /* 内边距 */
+    text-decoration: none; /* 去除下划线 */
+    color: white; /* 文字颜色 */
+    background-color: rgba(255, 255, 255, 0.2); /* 悬停背景颜色 */
+    border-radius: 5px; /* 圆角 */
+}
+
+.directory-content ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* 悬停时背景颜色 */
+}
+
+
+
+/*******************************************************************/
+/* Logo 樣式 */
+.logo-container {
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中子元素 */
+}
+
+.logo-container a {
+    color: inherit; /* 继承父元素的文字颜色 */
+    text-decoration: none; /* 取消下划线 */
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中子元素 */
+}
+
+.logo {
+    height: 100px; /* 图片高度为50px */
+    margin-right: 20px; /* 右侧外边距为10px */
+}
+.company-image {
+    max-width: 50%; /* 设置最大宽度 */
+    max-height: 100px; /* 设置最大高度 */
+}
+
+/***************************************/
+
+/* 頁面標題 */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/***************************************/
+.gallery-container {
+    max-width: 1200px; /* 设置最大宽度 */
+    margin: 20px auto; /* 水平居中并增加垂直外边距 */
+    padding: 0 20px; /* 左右内边距 */
+}
+
+/* 图片库样式 */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center; /* 使整个图片库水平居中 */
+}
+
+/* 图片项样式 */
+.image-item {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: flex-start; /* 水平对齐 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    padding: 10px;
+    background-color: #fff; /* 背景色 */
+}
+
+/* 图片样式 */
+.gallery-image {
+    width: 150px; /* 固定宽度 */
+    height: 150px; /* 固定高度，保持正方形 */
+    object-fit: cover; /* 确保图像完全填充容器，裁剪溢出部分 */
+    margin-right: 20px; /* 图片和文字之间的间距 */
+}
+
+/* 文本样式 */
+.image-caption {
+    color: #333;
+    font-size: 1em; /* 字体大小 */
+    font-weight: bold;
+    text-align: left; /* 左对齐 */
+    white-space: nowrap; /* 防止换行 */
+}
+
+@media (max-width: 600px) {
+    .image-item {
+        flex-direction: column; /* 垂直排列图片和文字 */
+        align-items: center; /* 水平居中 */
+    }
+
+    .gallery-image {
+        margin-right: 0; /* 移除图片和文字之间的间距 */
+        margin-bottom: 10px; /* 图片和文字之间增加垂直间距 */
+    }
+
+    .image-caption {
+        text-align: center; /* 中心对齐文字 */
+    }
+}
